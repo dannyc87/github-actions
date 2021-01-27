@@ -11,6 +11,7 @@ jobs:
           node -v
           npm -v
       - name: python command
+        shell: python
         run: |
           import os
           print(os.getenv('GITHUB_WORKFLOW')
