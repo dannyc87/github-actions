@@ -14,4 +14,8 @@ jobs:
         shell: python
         run: |
           import os
-          print(os.getenv('GITHUB_WORKFLOW'))
+          print(os.getenv('GITHUB_WORKFLOW'), 'no value set')
+      - name: checkout
+        uses: actions/checkout
+      - name: list files
+        run: ls -aR
