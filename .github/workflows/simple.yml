@@ -14,4 +14,4 @@ jobs:
         shell: python
         run: |
           import os
-          print(os.getenv('GITHUB_WORKFLOW')
+          print(os.getenv('GITHUB_WORKFLOW'))
