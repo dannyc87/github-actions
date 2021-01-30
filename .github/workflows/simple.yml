@@ -1,5 +1,10 @@
 name: Shell Comands
-on: push
+on:
+  push:
+  pull_request:
+    types:
+      - opened
+      - reopened
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
@@ -16,6 +21,6 @@ jobs:
           import os
           print(os.getenv('GITHUB_WORKFLOW'), 'no value set')
       - name: checkout
-        uses:  actions/checkout@v2
+        uses: actions/checkout@v2
       - name: list files
         run: ls -aR
